@@ -3,8 +3,6 @@
     border-radius: $radius;
   }
 
-
-
   @mixin add-to-cart-style {
     @include border-radius(25px);
     font-family: variables.$font-family-base;
@@ -87,7 +85,6 @@
       font-size: 1.5rem;
       margin-top: 1rem;
     }
-
 
     .item {
       display: grid;
@@ -214,6 +211,136 @@
     }
 
   }
+
+    // === order confirmation window mixin style === //
+  
+    @mixin order-confirmation-window-style {
+
+      box-sizing: border-box;
+      position: fixed;
+      width: 100vw;
+      height: 90vh;
+      bottom: 0;
+      left: 0;
+      background: white;
+      padding: 1rem;
+      border-radius: 15px 15px 0 0;
+      z-index: 1001;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);  
+
+      #order-confirmation-icon {
+        margin: 1rem 0 0 0;
+        width: 2.5rem;
+      }
+
+      h6 {
+        font-size: 3rem;
+        margin: 1rem 0 0 0;
+      }
+
+      p {
+        color: hsl(12, 20%, 44%);
+      }
+
+      #items-ordered {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        border-radius: 15px;
+        padding: 1rem;
+        gap: 0.5rem;
+        align-items: center;
+        background-color: hsl(20, 50%, 96%);
+          
+          #ordered-item-photo {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            width: 70%;
+            height: 70%;
+          }
+    
+          .ordered-item-name {
+            grid-row: 1;
+            grid-column: 2;
+            margin-top: 0;
+            color: hsl(14, 65%, 9%);
+            font-weight: 600;
+            margin-left: -1.5rem;
+          }
+
+            .ordered-item-count {
+              color: variables.$price-color;
+              grid-column: 2;
+              grid-row: 2;
+              font-size: 0.8rem;
+              font-size: 1rem;
+              margin-left: -1.5rem;
+            }
+
+            .ordered-price-of-one {
+              grid-column: 2;
+              grid-row: 2;
+              color: hsl(12, 20%, 44%);
+              font-size: 0.8rem;
+              padding-right: 1rem;
+            }
+
+            .ordered-price-of-all {
+              grid-column: 3;
+              grid-row: 1 / 3;
+              color: hsl(12, 20%, 44%);
+              font-weight: 600;
+              font-size: 0.8rem;
+              justify-self: center;
+              margin-top: 0;
+            }
+      
+          hr {
+            grid-row: 3;
+            grid-column: 1 / 4;
+            width: 100%;
+            opacity: 0.2;
+          }
+      }
+
+  
+      #order-total-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+  
+        h5 {
+          font-weight: 100;
+        }
+  
+        #total-amount {
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+    }
+  
+      #start-new-order-button-container {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+  
+        .start-new-order-button {
+          border-radius: 30px;
+          background-color: variables.$price-color;
+          padding: 1rem;
+          color: white;
+          border: none;
+          width: 100%;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+    
+      }
+  
+    }
+  
+  
 
 
 

@@ -7,7 +7,7 @@
     <title>Desserts webpage with cart function</title>
   </head>
   <body>
-    
+
     <!-- HERO -->
     <header role="banner">
       <h1> Desserts </h1>
@@ -19,7 +19,7 @@
 
         <div>
           <div class="img-and-button-container">
-            <img src="./public/assets/images/image-waffle-mobile.jpg" alt="Waffle with Berries" />
+            <img src="./assets/images/image-waffle-mobile.jpg" alt="Waffle with Berries" />
             <button class="add-to-cart" aria-label="Add Waffle with Berries to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -39,7 +39,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-creme-brulee-mobile.jpg" alt="Vanilla Bean Crème Brûlée" />
+            <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="Vanilla Bean Crème Brûlée" />
             <button class="add-to-cart" aria-label="Add Vanilla Bean Crème Brûlée to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -60,7 +60,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-macaron-mobile.jpg" alt="Macaron Mix of Five" />
+            <img src="./assets/images/image-macaron-mobile.jpg" alt="Macaron Mix of Five" />
             <button class="add-to-cart" aria-label="Add Macaron Mix of Five to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -81,7 +81,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-tiramisu-mobile.jpg" alt="Classic Tiramisu" />
+            <img src="./assets/images/image-tiramisu-mobile.jpg" alt="Classic Tiramisu" />
             <button class="add-to-cart" aria-label="Add Classic Tiramisu to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -102,7 +102,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-baklava-mobile.jpg" alt="Pistachio Baklava" />
+            <img src="./assets/images/image-baklava-mobile.jpg" alt="Pistachio Baklava" />
             <button class="add-to-cart" aria-label="Add Pistachio Baklava to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -123,7 +123,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-meringue-mobile.jpg" alt="Lemon Meringue Pie" />
+            <img src="./assets/images/image-meringue-mobile.jpg" alt="Lemon Meringue Pie" />
             <button class="add-to-cart" aria-label="Add Lemon Meringue Pie to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -144,7 +144,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-cake-mobile.jpg" alt="Red Velvet Cake" />
+            <img src="./assets/images/image-cake-mobile.jpg" alt="Red Velvet Cake" />
             <button class="add-to-cart"  aria-label="Add Red Velvet Cake to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -165,7 +165,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-brownie-mobile.jpg" alt="Salted Caramel Brownie" />
+            <img src="./assets/images/image-brownie-mobile.jpg" alt="Salted Caramel Brownie" />
             <button class="add-to-cart"  aria-label="Add Salted Caramel Brownie to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -186,7 +186,7 @@
 
         <div>
           <div class="img-and-button-container" >
-            <img src="./public/assets/images/image-panna-cotta-mobile.jpg" alt="Vanilla Panna Cotta" />
+            <img src="./assets/images/image-panna-cotta-mobile.jpg" alt="Vanilla Panna Cotta" />
             <button class="add-to-cart" aria-label="Add Vanilla Panna Cotta to cart">
               <img src="./public/assets/images/icon-add-to-cart.svg" alt="" aria-hidden="true" />
               <span>Add to Cart</span>
@@ -218,6 +218,7 @@
         <p>Your added items will appear here</p>
       </div>
 
+      <!-- NOT EMPPTY CART -->
       <div class="not-empty-cart" >
         <h4 id="quantity">Your Cart (<span aria-live="polite"><!-- Quantity -->0</span>)</h4>
 
@@ -248,9 +249,36 @@
         </div>
 
       </div>
-
-
     </section>
+
+        <!-- ORDER CONFIRMATION WINDOW -->
+        <div id="confirmation-modal">
+          <img id="order-confirmation-icon" src="./public/assets/images/icon-order-confirmed.svg">
+          <h6>Order Confirmed</h6>
+          <p>We hope you enjoy your food!</p>
+    
+          <div id="items-ordered">
+              <img id="ordered-item-photo" src="./public/assets/images/image-baklava-mobile.jpg" >
+              <p class="ordered-item-name">Name</p>
+                <p class="ordered-item-count">1x</p>
+                <p class="ordered-price-of-one">@price-of-one</p>
+                <p class="ordered-price-of-all">@price-of-all</p>
+              <hr>
+          </div>
+    
+          <div id="order-total-container" >
+            <h5>Order Total</h5>
+            <span id="total-amount">$xx.xx</span>
+          </div>
+          
+          <div id="start-new-order-button-container" >
+            <button class="start-new-order-button">Start new order</button>
+          </div>
+         </div>
+
+         <div id="overlay" class="overlay"></div>
+        
+    
 
     <!-- FOOTER -->  
     <footer role="contentinfo">
