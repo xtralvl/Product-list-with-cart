@@ -1,0 +1,61 @@
+@use './variables.scss';
+@mixin border-radius($radius) {
+    border-radius: $radius;
+  }
+
+  @mixin button-style() {
+    @include border-radius(25px);
+    font-family: variables.$font-family-base;
+    font-weight: 600;
+    border: .5px solid hsl(7, 20%, 60%);
+    background-color: white;
+    width: 50%;
+    padding: 0.65rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  @mixin price-style {
+    color: variables.$price-color;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: -1rem;
+}
+
+// === EMPTY CART STYE === //
+@mixin empty-cart-style {
+  display: flex;
+  flex-direction: column;
+
+  #quantity {
+    justify-self: flex-start !important;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  #empty-cart-image {
+    justify-self: center;
+    align-self: center;
+    margin-top: 1rem;
+    width: 150px;
+    opacity: 0.8;
+  }
+
+  p {
+    justify-self: center;
+    align-self: center;
+    color: hsl(12, 20%, 44%);
+  }
+}
+
+  // === NOT EMPTY CART STYE === //
+
+  @mixin not-empty-cart-style {
+    
+    .empty-cart-image {
+      display: none;
+  }
+
+  }
+
