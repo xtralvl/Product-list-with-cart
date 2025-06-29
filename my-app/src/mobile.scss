@@ -2,8 +2,14 @@
 @use './style_resources/mixins.scss' as *;
 
 
-
 @media (max-width: 500px) {
+
+    .add-to-cart,
+    .quantity-controller button,
+    .not-empty-cart button {
+    cursor: pointer;
+}
+
 
    body {
     background-color: hsl(20, 50%, 98%);
@@ -82,8 +88,11 @@
 
     .not-empty-cart {
         @include not-empty-cart-style;
+        
+
 
 }
+
 
 footer {
     margin-top: 2rem;

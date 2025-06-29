@@ -209,11 +209,46 @@
     </main>
 
     <!-- CART -->
-    <section id="cart" class="empty-cart" aria-label="Shopping cart">
+     <!-- EMPTY CART -->
+    <section id="cart" aria-label="Shopping cart">
       
-      <h4 id="quantity" >Your Cart (<span aria-live="polite"><!-- Quantity -->0</span>)</h4>
-      <img id="empty-cart-image" src="./public/assets/images/illustration-empty-cart.svg">
-      <p>Your added items will appear here</p>
+      <div class="empty-cart" >
+        <h4 id="quantity">Your Cart (<span aria-live="polite"><!-- Quantity -->0</span>)</h4>
+        <img id="empty-cart-image" src="./public/assets/images/illustration-empty-cart.svg">
+        <p>Your added items will appear here</p>
+      </div>
+
+      <div class="not-empty-cart" >
+        <h4 id="quantity">Your Cart (<span aria-live="polite"><!-- Quantity -->0</span>)</h4>
+
+        <div id="items-in-cart" >
+          <div class="item">
+            <p class="item-name">Name</p>
+            <div class="details-div-in-cart" >
+              <p class="item-count">1x</p>
+              <p class="price-of-one">@price-of-one</p>
+              <p class="price-of-all">@price-of-all</p>
+            </div>
+            <button><img id="remove-item-icon" src="./public/assets/images/icon-remove-item.svg" ></button>
+            <hr>
+          </div>
+        </div>
+
+        <div id="order-total-container" >
+          <h5>Order Total</h5>
+          <span id="total-amount">$xx.xx</span>
+        </div>
+
+        <div id="carbon-neutral-container" >
+          <p> <img src="./public/assets/images/icon-carbon-neutral.svg"> This is a <span>carbon-neutral</span> delivery</p>
+        </div>
+        
+        <div id="confirm-order-button-container" >
+          <button class="confirm-order-button">Confirm order</button>
+        </div>
+
+      </div>
+
 
     </section>
 
