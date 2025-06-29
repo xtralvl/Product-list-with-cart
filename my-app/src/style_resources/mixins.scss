@@ -3,7 +3,7 @@
     border-radius: $radius;
   }
 
-  @mixin button-style() {
+  @mixin add-to-cart-style {
     @include border-radius(25px);
     font-family: variables.$font-family-base;
     font-weight: 600;
@@ -14,6 +14,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin quantity-controller-style {
+  @include border-radius(25px);
+  font-family: variables.$font-family-base;
+  font-weight: 600;
+  background-color: variables.$price-color;
+  color: white;
+  width: 50%;
+  padding: 0.65rem 0rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    background: none;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 
   @mixin price-style {

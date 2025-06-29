@@ -38,8 +38,8 @@
         display: flex;
         flex-direction: column;
 
-        button {
-            @include button-style;
+        .add-to-cart {
+            @include add-to-cart-style;
             align-self: center;
             margin-top: -1.35rem;
 
@@ -47,6 +47,13 @@
                 margin-left: 0.5rem;
                 color: hsl(14, 65%, 9%);
             }
+        }
+
+        .quantity-controller {
+            @include quantity-controller-style;
+            align-self: center;
+            margin-top: -1.35rem;
+
         }
         
     }
