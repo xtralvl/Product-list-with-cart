@@ -49,13 +49,12 @@
     margin-top: -1rem;
 }
 
-// === EMPTY CART STYE === //
+// === EMPTY CART STYLE === //
 @mixin empty-cart-style {
-  display: none;
-  // display: flex;
+  display: flex;
   flex-direction: column;
 
-  #quantity {
+  .cart-quantity {
     justify-self: flex-start !important;
     font-size: 1.5rem;
     margin-top: 1rem;
@@ -80,7 +79,7 @@
 
   @mixin not-empty-cart-style {
 
-    #quantity {
+    .cart-quantity {
       justify-self: flex-start !important;
       font-size: 1.5rem;
       margin-top: 1rem;

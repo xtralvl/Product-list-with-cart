@@ -30,10 +30,10 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
+    
           
           <h2>Waffle</h2>
-          <h3>Waffle with Berries</h3>
+          <h3 class="product" data-product-id="waffle" >Waffle with Berries</h3>
           <p class="price">$6.50</p>
         </div>
 
@@ -50,11 +50,10 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
+
           <h2>Crème Brûlée</h2>
-          <h3> Vanilla Bean Crème Brûlée</h3>
+          <h3 class="product" data-product-id="creme-brulee" > Vanilla Bean Crème Brûlée</h3>
           <p class="price" >$7.00</p> 
         </div>
 
@@ -71,11 +70,10 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
+
           <h2>Macaron</h2>
-          <h3>Macaron Mix of Five</h3>
+          <h3 class="product" data-product-id="macaron" >Macaron Mix of Five</h3>
           <p class="price" >$8.00</p>
         </div>
 
@@ -92,11 +90,9 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
           <h2>Tiramisu</h2>
-          <h3>Classic Tiramisu</h3>
+          <h3 class="product"  data-product-id="tiramisu" >Classic Tiramisu</h3>
           <p class="price" >$5.50</p>
         </div>
 
@@ -113,11 +109,9 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
           <h2>Baklava</h2>
-          <h3>Pistachio Baklava</h3>
+          <h3 class="product" data-product-id="baklava" >Pistachio Baklava</h3>
           <p class="price">$4.00</p>
         </div>
 
@@ -134,11 +128,9 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
           <h2>Pie</h2>
-          <h3>Lemon Meringue Pie</h3>
+          <h3 class="product" data-product-id="pie" >Lemon Meringue Pie</h3>
           <p class="price" >$5.00</p>
         </div>
 
@@ -155,11 +147,9 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
           <h2>Cake</h2>
-          <h3>Red Velvet Cake</h3>
+          <h3 class="product" data-product-id="cake" >Red Velvet Cake</h3>
           <p class="price" >$4.65</p>
         </div>
 
@@ -176,11 +166,9 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
           <h2>Brownie</h2>
-          <h3>Salted Caramel Brownie</h3>
+          <h3 class="product" data-product-id="brownie" >Salted Caramel Brownie</h3>
           <p class="price" >$4.50</p>
         </div>
 
@@ -197,11 +185,9 @@
               <span class="quantity">1</span>
               <button class="increase">+</button>
             </div>
-          </div>
 
-          </div>
           <h2>Panna Cotta</h2>
-          <h3>Vanilla Panna Cotta</h3>
+          <h3 class="product" data-product-id="panna-cotta" >Vanilla Panna Cotta</h3>
           <p class="price" >$6.50</p>
         </div>
 
@@ -213,14 +199,13 @@
     <section id="cart" aria-label="Shopping cart">
       
       <div class="empty-cart" >
-        <h4 id="quantity">Your Cart (<span aria-live="polite"><!-- Quantity -->0</span>)</h4>
+        <h4 class="cart-quantity">Your Cart (<span class="cart-quantity-number" aria-live="polite"><!-- Quantity -->0</span>)</h4>
         <img id="empty-cart-image" src="/assets/images/illustration-empty-cart.svg">
-        <p>Your added items will appear here</p>
+        <p id="empty-cart-paragraph">Your added items will appear here</p>
       </div>
 
       <!-- NOT EMPPTY CART -->
       <div class="not-empty-cart" >
-        <h4 id="quantity">Your Cart (<span aria-live="polite"><!-- Quantity -->0</span>)</h4>
 
         <div id="items-in-cart" >
           <div class="item">
@@ -277,8 +262,6 @@
          </div>
 
          <div id="overlay" class="overlay"></div>
-        
-    
 
     <!-- FOOTER -->  
     <footer role="contentinfo">
@@ -287,6 +270,6 @@
     </footer>
 
     <!-- JAVASCRIPT -->
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/buttons.ts"></script>
   </body>
 </html>
